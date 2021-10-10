@@ -7,6 +7,9 @@ public class Steps {
 
 	List<Step> steps;
 
+	public Steps() {
+	}
+
 	public Steps(List<Step> steps) {
 		this.steps = steps;
 	}
@@ -21,5 +24,9 @@ public class Steps {
 			numbers.add(step.getNumber());
 		}
 		return numbers;
+	}
+
+	public Step getStep(int index) {
+		return steps.get(index);
 	}
 }
