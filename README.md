@@ -18,10 +18,9 @@
   * List\<Step>
 * RacingCar
   * Map<Car, Steps>
-* RacingGame
+* RacingGameController
   * List\<RacingCar>
-* Trial
-  * 시도 횟수
+  * int trial
 * InputView
   * 자동차 이름 받기
   * 시도할 횟수 받기
