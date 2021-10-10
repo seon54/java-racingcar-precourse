@@ -13,9 +13,7 @@ public class StepsTest {
 	@CsvSource({"4, 6", "2, 9"})
 	void testGetStepNumbers(int num1, int num2) {
 		// given
-		Steps steps = new Steps();
-		steps.addStep(new Step(num1));
-		steps.addStep(new Step(num2));
+		Steps steps = new Steps(Arrays.asList(new Step(num1), new Step(num2)));
 		// when
 		List<Integer> numbers = steps.getStepNumbers();
 		// then

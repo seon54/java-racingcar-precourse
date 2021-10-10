@@ -7,6 +7,10 @@ public class Steps {
 
 	List<Step> steps = new ArrayList<>();
 
+	public Steps(List<Step> steps) {
+		this.steps = steps;
+	}
+
 	public void addStep(Step step) {
 		steps.add(step);
 	}
