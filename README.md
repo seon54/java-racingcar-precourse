@@ -10,16 +10,16 @@
 ## 구현 내용
 * Car
   * 이름은 5자 이하
-* Cars
-  * List\<Car>
 * Step
   * 0 - 9 사이의 값
   * 4 이상 전진
   * 3 이하 멈춤
 * Steps
   * List\<Step>
+* RacingCar
+  * Map<Car, Steps>
 * RacingGame
-  * Map<Cars, Steps>
+  * List\<RacingCar>
 * Trial
   * 시도 횟수
 * InputView
