@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class CarsTest {
+public class CarTest {
 
 	@Test
 	@DisplayName("자동차 이름은 5자 이하만 가능하다.")
