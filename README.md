@@ -18,7 +18,7 @@
   * 3 이하 멈춤
 * Steps
   * List\<Step>
-* RacingCar
+* RacingGame
   * Map<Cars, Steps>
 * Trial
   * 시도 횟수
