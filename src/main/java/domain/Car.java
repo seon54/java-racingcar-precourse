@@ -4,7 +4,7 @@ import static domain.ErrorCode.*;
 
 public class Car {
 
-	private String name;
+	private final String name;
 
 	public Car(String name) {
 		validate(name);
