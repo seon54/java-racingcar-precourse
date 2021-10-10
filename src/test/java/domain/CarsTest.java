@@ -18,7 +18,7 @@ public class CarsTest {
 		String name = car.getName();
 
 		// then
-		assertEquals(name, "새미");
+		assertEquals("새미", name);
 	}
 
 	@Test
@@ -30,6 +30,6 @@ public class CarsTest {
 		);
 
 		// then
-		assertEquals(exception.getMessage(), NAME_ERROR.getMessage());
+		assertEquals(NAME_ERROR.getMessage(), exception.getMessage());
 	}
 }
