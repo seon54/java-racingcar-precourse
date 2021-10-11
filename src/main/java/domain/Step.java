@@ -1,27 +1,36 @@
 package domain;
 
+import static domain.Constant.*;
 import static domain.ErrorCode.*;
+
+import java.util.Collections;
 
 public class Step {
 
-	private final int number;
+	private int result;
 
-	public Step(int number) {
+	public Step() {
+		result = 0;
+	}
+
+	public void addRandomNumber(int number) {
 		validate(number);
-		this.number = number;
+		if (isMovable(number)) {
+			result++;
+		}
 	}
 
 	private void validate(int number) {
-		if (number < 0 || number > 9) {
+		if (number < MIN_NUMBER || number > MAX_NUMBER) {
 			throw new IllegalArgumentException(NUMBER_ERROR.getMessage());
 		}
 	}
 
-	public int getNumber() {
-		return number;
+	private boolean isMovable(int number) {
+		return number >= MOVABLE_NUMBER;
 	}
 
-	public boolean isMovable() {
-		return this.number >= 4;
+	public String getResult() {
+		return String.join("", Collections.nCopies(result, "-"));
 	}
 }
