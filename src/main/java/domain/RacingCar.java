@@ -1,24 +1,20 @@
 package domain;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class RacingCar {
 
-	private final Map<Car, Steps> racingCarMap = new HashMap<>();
+	Map<Car, Step> map = new HashMap<>();
 
-	private RacingCar() {}
-
-	public RacingCar(Car car, Steps steps) {
-		racingCarMap.put(car, steps);
+	public RacingCar() {
 	}
 
-	public String getCarName() {
-		return ((Car)racingCarMap.keySet().toArray()[0]).getName();
+	public void setMap(Car car, Step steps) {
+		map.put(car, steps);
 	}
 
-	public List<Integer> getStepNumbers() {
-		return ((Steps)racingCarMap.values().toArray()[0]).getStepNumbers();
+	public Step getSteps(Car car) {
+		return map.get(car);
 	}
 }
