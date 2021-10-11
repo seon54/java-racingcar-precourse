@@ -17,4 +17,8 @@ public class RacingCar {
 	public Step getSteps(Car car) {
 		return map.get(car);
 	}
+
+	public int getResult(Car car) {
+		return map.get(car).getResultNumber();
+	}
 }
