@@ -30,7 +30,11 @@ public class Step {
 		return number >= MOVABLE_NUMBER;
 	}
 
-	public String getResult() {
+	public String getPrintResult() {
 		return String.join("", Collections.nCopies(result, "-"));
+	}
+
+	public int getResultNumber() {
+		return result;
 	}
 }

@@ -37,24 +37,36 @@ class StepTest {
 
 	@Test
 	@DisplayName("숫자가 4 이상일 경우 전진")
-	void testGetResult() {
+	void testGetResultPrint() {
 		// given
 		Step step = new Step();
 		step.addRandomNumber(6);
 		// when
-		String result = step.getResult();
+		String result = step.getPrintResult();
 		// then
 		assertEquals("-", result);
 	}
 	@Test
 	@DisplayName("숫자가 3 이하일 경우 멈춤")
-	void testGetResult2() {
+	void testGetResultPrint2() {
 		// given
 		Step step = new Step();
 		step.addRandomNumber(2);
 		// when
-		String result = step.getResult();
+		String result = step.getPrintResult();
 		// then
 		assertEquals("", result);
+	}
+
+	@ParameterizedTest
+	@CsvSource(value = {"4, 1", "2, 0", "0, 0", "9, 1"})
+	void testResultNumber(int number, int result) {
+		// given
+		Step step = new Step();
+		step.addRandomNumber(number);
+		// when
+		int resultNumber = step.getResultNumber();
+		// then
+		assertEquals(result, resultNumber);
 	}
 }
