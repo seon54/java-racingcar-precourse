@@ -10,6 +10,10 @@ public class RacingCar {
 	public RacingCar() {
 	}
 
+	public RacingCar(Car car) {
+		map.put(car, new Step());
+	}
+
 	public void setMap(Car car, Step steps) {
 		map.put(car, steps);
 	}
