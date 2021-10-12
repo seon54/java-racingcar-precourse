@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class RacingCar {
 
-	Map<Car, Step> map = new HashMap<>();
+	private Map<Car, Step> map = new HashMap<>();
 
 	public RacingCar() {
 	}
