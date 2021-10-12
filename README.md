@@ -21,6 +21,8 @@
   * 3 이하 멈춤
 * RacingCar
   * Map<Car, Step>
+* RacingCars
+  * List\<RacingCar>
 * RacingGameController
   * 게임 시작
   * 게임 종료
